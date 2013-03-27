@@ -7,7 +7,7 @@
 	Version: 1.0
 	Description: Squared is a fully responsive section that supports up to 15 images or icons with your custom text.
 	Class Name: Squared
-	Workswith: main
+	Workswith: templates
 	Cloning: true
 */
 
