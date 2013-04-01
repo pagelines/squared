@@ -101,7 +101,7 @@ class Squared extends PageLinesSection {
 
 								for ( $y = 1; $y <= $icons_count; $y++ ) {
 									if ( ploption( 'squared_icons_'.$i.$y, $this->oset ) ) {
-										$icons .= sprintf('<li><a href="%s"><i class="%s"></i></a></li>', ploption('squared_icons_link_'.$i.$y, $this->oset ), ploption('squared_icons_'.$i.$y, $this->oset ) );
+										$icons .= sprintf('<li><a href="%s" target="_blank"><i class="%s"></i></a></li>', ploption('squared_icons_link_'.$i.$y, $this->oset ), ploption('squared_icons_'.$i.$y, $this->oset ) );
 									} else {
 										$icons .='';
 									}
@@ -174,7 +174,7 @@ class Squared extends PageLinesSection {
 			'inputlabel'  => __( 'Number of Squares to Configure', 'pagelines' ),
 			'title'   => __( 'Number of Squares', 'pagelines' ),
 			'shortexp'   => __( 'Enter the number of Squares.', 'pagelines' ),
-			'exp'    => __( "This number will be used to generate Squares and option setup. Option will update when settings is saved.", 'pagelines' ),
+			'exp'    => __( "This number will be used to generate Squares and option setup. Option will update when settings are saved.", 'pagelines' ),
 		);
 
 		global $post_ID;
@@ -193,7 +193,7 @@ class Squared extends PageLinesSection {
 						'inputlabel'  => __( 'Squared Image', 'Squared' ),
 						'type'   => 'image_upload',
 						'title'   => __( 'Squared Image ', 'Squared' ) . $i,
-						'shortexp'   => __( 'Upload an image...', 'Squared' )
+						'shortexp'   => __( 'Upload an image... </br>Recommended image size: 160x160</br>Images will scale to match the size of the square, not crop.', 'Squared' )
 
 					),
 					'squared_background_color_'.$i  => array(
@@ -206,7 +206,7 @@ class Squared extends PageLinesSection {
 						'inputlabel' => __( 'Squared Heading', 'Squared' ),
 						'type'   => 'text',
 						'title'   => __( 'Squared Heading ', 'Squared' ) . $i,
-						'shortexp'   => __( 'Add a heading text...', 'Squared' )
+						'shortexp'   => __( 'Add a heading text... </br>Recommended character limit: 20', 'Squared' )
 					),
 					'squared_head_color_'.$i  => array(
 						'inputlabel' => __( 'Color', 'Squared' ),
@@ -216,7 +216,7 @@ class Squared extends PageLinesSection {
 						'inputlabel' => __( 'Squared Subheading', 'Squared' ),
 						'type'   => 'text',
 						'title'   => __( 'Squared Subheading ', 'Squared' ) . $i,
-						'shortexp'   => __( 'Add a subheading...', 'Squared' )
+						'shortexp'   => __( 'Add a subheading... </br>Recommended character limit: 35', 'Squared' )
 					),
 					'squared_subhead_color_'.$i  => array(
 						'inputlabel' => __( 'Color', 'Squared' ),
@@ -236,7 +236,7 @@ class Squared extends PageLinesSection {
 						'inputlabel' => __( 'Squared About Body', 'Squared' ),
 						'type'   => 'textarea',
 						'title'   => __( 'Squared About Body ', 'Squared' ) . $i,
-						'shortexp'   => __( 'Add a body text...', 'Squared' )
+						'shortexp'   => __( 'Add body text...', 'Squared' )
 					),
 					'squared_about_body_color_'.$i  => array(
 						'inputlabel' => __( 'Color', 'Squared' ),
@@ -249,7 +249,7 @@ class Squared extends PageLinesSection {
 						'default'  => 1,
 						'inputlabel'  => __( 'Icons to configure ', 'Squared' ) . $i,
 						'title'   => __( 'About text icons ', 'Squared' ) . $i,
-						'shortexp'   => __( 'Enter the number of Font Awesome Icons you want. Option will update when settings is saved.', 'Squared' )
+						'shortexp'   => __( 'Enter the number of Font Awesome Icons you want. Option will update when settings are saved.', 'Squared' )
 					),
 				),
 				'title'   => __( 'Square ', 'Squared' ) . $i,

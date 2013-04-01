@@ -1,7 +1,7 @@
 == Description ==
 <h3>What is Squared?</h3>
 
-Squared is a nice responsive section full of squares. Squared is responsive and gives you multiple options. It features a nice animating effect. You can have up to 15 squares in various colors in each section. It can be cloned and will look nice on every website.
+Squared is a interactive grid system full of squares text, unicorn dust and awesomeness. Squared is responsive and gives you multiple options. It features a nice animating effect. You can have up to 15 squares in various colors in each section. It can be cloned and will look nice on every website.
 
 Want it? <strong>Buy it! :)</strong>
 
