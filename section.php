@@ -156,7 +156,7 @@ class Squared extends PageLinesSection {
 	}
 
 	function do_defaults() {
-		echo setup_section_notify($this, __('Please set up Squared.'));
+		echo setup_section_notify($this, __('Please set up Squared.', 'Squared'));
 	}
 
 
@@ -171,10 +171,10 @@ class Squared extends PageLinesSection {
 			'count_start' => 1,
 			'count_number'  => 15,
 			'default'  => 1,
-			'inputlabel'  => __( 'Number of Squares to Configure', 'pagelines' ),
-			'title'   => __( 'Number of Squares', 'pagelines' ),
-			'shortexp'   => __( 'Enter the number of Squares.', 'pagelines' ),
-			'exp'    => __( "This number will be used to generate Squares and option setup. Option will update when settings are saved.", 'pagelines' ),
+			'inputlabel'  => __( 'Number of Squares to Configure', 'Squared' ),
+			'title'   => __( 'Number of Squares', 'Squared' ),
+			'shortexp'   => __( 'Enter the number of Squares.', 'Squared' ),
+			'exp'    => __( "This number will be used to generate Squares and option setup. Option will update when settings are saved.", 'Squared' ),
 		);
 
 		global $post_ID;
