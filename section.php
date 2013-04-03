@@ -5,7 +5,7 @@
 	Author URI: http://ahansson.com
 	Demo: http://squared.ahansson.com
 	Version: 1.0
-	Description: Squared is a fully responsive section that supports up to 15 images or icons with your custom text.
+	Description: Squared is an interactive grid system that supports up to 15 images or icons with your custom text. It is awesome!
 	Class Name: Squared
 	Workswith: templates
 	Cloning: true
