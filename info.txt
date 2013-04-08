@@ -11,5 +11,8 @@ Please do not leave a review as a support question, they are for reviews. I am n
 
 == Changelog ==
 
+= 1.1 =
+* Now works in content area
+
 = 1.0 =
 * Initial Release
