@@ -11,6 +11,9 @@ Please do not leave a review as a support question, they are for reviews. I am n
 
 == Changelog ==
 
+= 1.2 =
+* Fixed center alignment issue
+
 = 1.1 =
 * Now works in content area
 
