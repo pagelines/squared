@@ -278,7 +278,7 @@ class Squared extends PageLinesSection {
 
 		$metatab_settings = array(
 			'id'   => 'squared_options',
-			'name'   => __( 'Squared', 'Squared' ),
+			'name'   => 'Squared',
 			'icon'   => $this->icon,
 			'clone_id' => $settings['clone_id'],
 			'active' => $settings['active']
