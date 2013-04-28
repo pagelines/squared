@@ -11,6 +11,9 @@ Please do not leave a review as a support question, they are for reviews. I am n
 
 == Changelog ==
 
+= 1.5 =
+* Fixed icon bug that occured after 1.4 update
+
 = 1.4 =
 * Fixed responsive bug below 340px
 * LESS improvements

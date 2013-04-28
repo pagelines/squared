@@ -92,15 +92,50 @@ class Squared extends PageLinesSection {
 
 								$icons_count = ( ploption( 'squared_about_icons_'.$i, $this->oset ) ) ? ploption( 'squared_about_icons_'.$i, $this->oset ) : 1 ;
 
-								$icons = '';
-
-								for ( $y = 1; $y <= $icons_count; $y++ ) {
-									if ( ploption( 'squared_icons_'.$i.$y, $this->oset ) ) {
-										$icons .= sprintf('<li><a href="%s" target="_blank"><i class="%s"></i></a></li>', ploption('squared_icons_link_'.$i.$y, $this->oset ), ploption('squared_icons_'.$i.$y, $this->oset ) );
-									} else {
-										$icons .='';
-									}
-
+								if ( ploption( 'squared_icons_'.$i.'1', $this->oset ) ) {
+									$icons1 = sprintf('<li><a href="%s" target="_blank"><i class="%s"></i></a></li>', ploption('squared_icons_link_'.$i.'1', $this->oset ), ploption('squared_icons_'.$i.'1', $this->oset ) );
+								} else {
+									$icons1 ='';
+								}
+								if ( ploption( 'squared_icons_'.$i.'2', $this->oset ) ) {
+									$icons2 = sprintf('<li><a href="%s" target="_blank"><i class="%s"></i></a></li>', ploption('squared_icons_link_'.$i.'2', $this->oset ), ploption('squared_icons_'.$i.'2', $this->oset ) );
+								} else {
+									$icons2 ='';
+								}
+								if ( ploption( 'squared_icons_'.$i.'3', $this->oset ) ) {
+									$icons3 = sprintf('<li><a href="%s" target="_blank"><i class="%s"></i></a></li>', ploption('squared_icons_link_'.$i.'3', $this->oset ), ploption('squared_icons_'.$i.'3', $this->oset ) );
+								} else {
+									$icons3 ='';
+								}
+								if ( ploption( 'squared_icons_'.$i.'4', $this->oset ) ) {
+									$icons4 = sprintf('<li><a href="%s" target="_blank"><i class="%s"></i></a></li>', ploption('squared_icons_link_'.$i.'4', $this->oset ), ploption('squared_icons_'.$i.'4', $this->oset ) );
+								} else {
+									$icons4 ='';
+								}
+								if ( ploption( 'squared_icons_'.$i.'5', $this->oset ) ) {
+									$icons5 = sprintf('<li><a href="%s" target="_blank"><i class="%s"></i></a></li>', ploption('squared_icons_link_'.$i.'5', $this->oset ), ploption('squared_icons_'.$i.'5', $this->oset ) );
+								} else {
+									$icons5 ='';
+								}
+								if ( ploption( 'squared_icons_'.$i.'5', $this->oset ) ) {
+									$icons5 = sprintf('<li><a href="%s" target="_blank"><i class="%s"></i></a></li>', ploption('squared_icons_link_'.$i.'5', $this->oset ), ploption('squared_icons_'.$i.'5', $this->oset ) );
+								} else {
+									$icons5 ='';
+								}
+								if ( ploption( 'squared_icons_'.$i.'6', $this->oset ) ) {
+									$icons6 = sprintf('<li><a href="%s" target="_blank"><i class="%s"></i></a></li>', ploption('squared_icons_link_'.$i.'6', $this->oset ), ploption('squared_icons_'.$i.'6', $this->oset ) );
+								} else {
+									$icons6 ='';
+								}
+								if ( ploption( 'squared_icons_'.$i.'7', $this->oset ) ) {
+									$icons7 = sprintf('<li><a href="%s" target="_blank"><i class="%s"></i></a></li>', ploption('squared_icons_link_'.$i.'7', $this->oset ), ploption('squared_icons_'.$i.'7', $this->oset ) );
+								} else {
+									$icons7 ='';
+								}
+								if ( ploption( 'squared_icons_'.$i.'8', $this->oset ) ) {
+									$icons8 = sprintf('<li><a href="%s" target="_blank"><i class="%s"></i></a></li>', ploption('squared_icons_link_'.$i.'8', $this->oset ), ploption('squared_icons_'.$i.'8', $this->oset ) );
+								} else {
+									$icons8 ='';
 								}
 
 								if ($i > 3 && $i < 7 || $i > 9 && $i < 13 ) {
@@ -128,7 +163,7 @@ class Squared extends PageLinesSection {
 								}
 
 								if ( $the_img ) {
-									$output .= sprintf( '<div class="usquare_block" style="background-color:%s;">%s<div class="usquare_block_extended usquare_square_bg%s" style="background-color:%s;">%s<ul class="social_background">%s</ul><div class="row"></div>%s%s</div></div>', $the_background_color, $img_position, $i, $the_background_color, $close, $icons, $the_about_head, $the_about_body );
+									$output .= sprintf( '<div class="usquare_block" style="background-color:%s;">%s<div class="usquare_block_extended usquare_square_bg%s" style="background-color:%s;">%s<ul class="social_background">%s%s%s%s%s%s%s%s</ul><div class="row"></div>%s%s</div></div>', $the_background_color, $img_position, $i, $the_background_color, $close, $icons1, $icons2, $icons3, $icons4, $icons5, $icons6, $icons7, $icons8, $the_about_head, $the_about_body );
 								} else {
 									$output .='';
 								}
@@ -246,41 +281,73 @@ class Squared extends PageLinesSection {
 						'inputlabel' => __( sprintf('Font Awesome Icon %s: <br/>Example: "icon-facebook" Find them all at <a href="http://fortawesome.github.com/Font-Awesome/">Font Awesome</a>.', '1'), 'Squared' ),
 						'type'   => 'text',
 					),
+					'squared_icons_link_'.$i.'1'  => array(
+                        'inputlabel' => __( sprintf('Icon link %s: <br/>Example: "http://facebook.com".', '1'), 'Squared' ),
+                        'type'   => 'text',
+                    ),
 					'squared_icons_'.$i.'2'  => array(
 						'title'   => 'Squared Icon 2',
 						'inputlabel' => __( sprintf('Font Awesome Icon %s: <br/>Example: "icon-facebook" Find them all at <a href="http://fortawesome.github.com/Font-Awesome/">Font Awesome</a>.', '2'), 'Squared' ),
 						'type'   => 'text',
 					),
+					'squared_icons_link_'.$i.'2'  => array(
+                        'inputlabel' => __( sprintf('Icon link %s: <br/>Example: "http://facebook.com".', '2'), 'Squared' ),
+                        'type'   => 'text',
+                    ),
 					'squared_icons_'.$i.'3'  => array(
 						'title'   => 'Squared Icon 3',
 						'inputlabel' => __( sprintf('Font Awesome Icon %s: <br/>Example: "icon-facebook" Find them all at <a href="http://fortawesome.github.com/Font-Awesome/">Font Awesome</a>.', '3'), 'Squared' ),
 						'type'   => 'text',
 					),
+					'squared_icons_link_'.$i.'3'  => array(
+                        'inputlabel' => __( sprintf('Icon link %s: <br/>Example: "http://facebook.com".', '3'), 'Squared' ),
+                        'type'   => 'text',
+                    ),
 					'squared_icons_'.$i.'4'  => array(
 						'title'   => 'Squared Icon 4',
 						'inputlabel' => __( sprintf('Font Awesome Icon %s: <br/>Example: "icon-facebook" Find them all at <a href="http://fortawesome.github.com/Font-Awesome/">Font Awesome</a>.', '4'), 'Squared' ),
 						'type'   => 'text',
 					),
+					'squared_icons_link_'.$i.'4'  => array(
+                        'inputlabel' => __( sprintf('Icon link %s: <br/>Example: "http://facebook.com".', '4'), 'Squared' ),
+                        'type'   => 'text',
+                    ),
 					'squared_icons_'.$i.'5'  => array(
 						'title'   => 'Squared Icon 5',
 						'inputlabel' => __( sprintf('Font Awesome Icon %s: <br/>Example: "icon-facebook" Find them all at <a href="http://fortawesome.github.com/Font-Awesome/">Font Awesome</a>.', '5'), 'Squared' ),
 						'type'   => 'text',
 					),
+					'squared_icons_link_'.$i.'5'  => array(
+                        'inputlabel' => __( sprintf('Icon link %s: <br/>Example: "http://facebook.com".', '5'), 'Squared' ),
+                        'type'   => 'text',
+                    ),
 					'squared_icons_'.$i.'6'  => array(
 						'title'   => 'Squared Icon 6',
 						'inputlabel' => __( sprintf('Font Awesome Icon %s: <br/>Example: "icon-facebook" Find them all at <a href="http://fortawesome.github.com/Font-Awesome/">Font Awesome</a>.', '6'), 'Squared' ),
 						'type'   => 'text',
 					),
+					'squared_icons_link_'.$i.'6'  => array(
+                        'inputlabel' => __( sprintf('Icon link %s: <br/>Example: "http://facebook.com".', '6'), 'Squared' ),
+                        'type'   => 'text',
+                    ),
 					'squared_icons_'.$i.'7'  => array(
 						'title'   => 'Squared Icon 7',
 						'inputlabel' => __( sprintf('Font Awesome Icon %s: <br/>Example: "icon-facebook" Find them all at <a href="http://fortawesome.github.com/Font-Awesome/">Font Awesome</a>.', '7'), 'Squared' ),
 						'type'   => 'text',
 					),
+					'squared_icons_link_'.$i.'7'  => array(
+                        'inputlabel' => __( sprintf('Icon link %s: <br/>Example: "http://facebook.com".', '7'), 'Squared' ),
+                        'type'   => 'text',
+                    ),
 					'squared_icons_'.$i.'8'  => array(
 						'title'   => 'Squared Icon 8',
 						'inputlabel' => __( sprintf('Font Awesome Icon %s: <br/>Example: "icon-facebook" Find them all at <a href="http://fortawesome.github.com/Font-Awesome/">Font Awesome</a>.', '8'), 'Squared' ),
 						'type'   => 'text',
 					),
+					'squared_icons_link_'.$i.'8'  => array(
+                        'inputlabel' => __( sprintf('Icon link %s: <br/>Example: "http://facebook.com".', '8'), 'Squared' ),
+                        'type'   => 'text',
+                    ),
 				),
 				'title'   => __( 'Square ', 'Squared' ) . $i,
 				'shortexp'   => __( 'Setup options for square number ', 'Squared' ) . $i,
