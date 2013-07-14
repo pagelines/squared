@@ -11,6 +11,11 @@ Please do not leave a review as a support question, they are for reviews. I am n
 
 == Changelog ==
 
+= 1.7 =
+* Ready for PageLines DMS
+* Added "Link to" option
+* Few smaller bugfixes
+
 = 1.6 =
 * Fixed a compability issue with plugins using "close" style.
 
