@@ -315,56 +315,69 @@ class Squared extends PageLinesSection {
 						'inputlabel' => __( sprintf('Font Awesome Icon %s: <br/>Example: "icon-facebook" Find them all at <a href="http://fortawesome.github.com/Font-Awesome/">Font Awesome</a>.', '2'), 'Squared' ),
 						'type'   => 'text',
 					),
-					'squared_icons_link_'.$i.'2'  => array(
+					array(
+						'key' => 'squared_icons_link_'.$i.'2',
                         'inputlabel' => __( sprintf('Icon link %s: <br/>Example: "http://facebook.com".', '2'), 'Squared' ),
                         'type'   => 'text',
                     ),
-					'squared_icons_'.$i.'3'  => array(
+					array(
+						'key' => 'squared_icons_'.$i.'3',
 						'inputlabel' => __( sprintf('Font Awesome Icon %s: <br/>Example: "icon-facebook" Find them all at <a href="http://fortawesome.github.com/Font-Awesome/">Font Awesome</a>.', '3'), 'Squared' ),
 						'type'   => 'text',
 					),
-					'squared_icons_link_'.$i.'3'  => array(
+					array(
+						'key' => 'squared_icons_link_'.$i.'3',
                         'inputlabel' => __( sprintf('Icon link %s: <br/>Example: "http://facebook.com".', '3'), 'Squared' ),
                         'type'   => 'text',
                     ),
-					'squared_icons_'.$i.'4'  => array(
+					array(
+						'key' => 'squared_icons_'.$i.'4'
 						'inputlabel' => __( sprintf('Font Awesome Icon %s: <br/>Example: "icon-facebook" Find them all at <a href="http://fortawesome.github.com/Font-Awesome/">Font Awesome</a>.', '4'), 'Squared' ),
 						'type'   => 'text',
 					),
-					'squared_icons_link_'.$i.'4'  => array(
+					array(
+						'key' => 'squared_icons_link_'.$i.'4',
                         'inputlabel' => __( sprintf('Icon link %s: <br/>Example: "http://facebook.com".', '4'), 'Squared' ),
                         'type'   => 'text',
                     ),
-					'squared_icons_'.$i.'5'  => array(
+					array(
+						'key' => 'squared_icons_'.$i.'5',
 						'inputlabel' => __( sprintf('Font Awesome Icon %s: <br/>Example: "icon-facebook" Find them all at <a href="http://fortawesome.github.com/Font-Awesome/">Font Awesome</a>.', '5'), 'Squared' ),
 						'type'   => 'text',
 					),
-					'squared_icons_link_'.$i.'5'  => array(
+					array(
+						'key' => 'squared_icons_link_'.$i.'5',
                         'inputlabel' => __( sprintf('Icon link %s: <br/>Example: "http://facebook.com".', '5'), 'Squared' ),
                         'type'   => 'text',
                     ),
-					'squared_icons_'.$i.'6'  => array(
+					array(
+						'key' => 'squared_icons_'.$i.'6',
 						'inputlabel' => __( sprintf('Font Awesome Icon %s: <br/>Example: "icon-facebook" Find them all at <a href="http://fortawesome.github.com/Font-Awesome/">Font Awesome</a>.', '6'), 'Squared' ),
 						'type'   => 'text',
 					),
-					'squared_icons_link_'.$i.'6'  => array(
+					array(
+						'key' => 'squared_icons_link_'.$i.'6',
                         'inputlabel' => __( sprintf('Icon link %s: <br/>Example: "http://facebook.com".', '6'), 'Squared' ),
                         'type'   => 'text',
                     ),
-					'squared_icons_'.$i.'7'  => array(
-						'inputlabel' => __( sprintf('Font Awesome Icon %s: <br/>Example: "icon-facebook" Find them all at <a href="http://fortawesome.github.com/Font-Awesome/">Font Awesome</a>.', '7'), 'Squared' ),
+					array(
+						'key' => 'squared_icons_'.$i.'7',
+						'inputlabel' => __( sprintf('Font Awesome Icon %s: <br/>Example: "icon-facebook" Find them all at <a href="http://fortawesome.github.com/Font-Awesome/">Font Awesome</a>.', '6'), 'Squared' ),
 						'type'   => 'text',
 					),
-					'squared_icons_link_'.$i.'7'  => array(
+					array(
+						'key' => 'squared_icons_link_'.$i.'7',
                         'inputlabel' => __( sprintf('Icon link %s: <br/>Example: "http://facebook.com".', '7'), 'Squared' ),
                         'type'   => 'text',
                     ),
-					'squared_icons_'.$i.'8'  => array(
-						'inputlabel' => __( sprintf('Font Awesome Icon %s: <br/>Example: "icon-facebook" Find them all at <a href="http://fortawesome.github.com/Font-Awesome/">Font Awesome</a>.', '8'), 'Squared' ),
+					array(
+						'key' => 'squared_icons_'.$i.'7',
+						'inputlabel' => __( sprintf('Font Awesome Icon %s: <br/>Example: "icon-facebook" Find them all at <a href="http://fortawesome.github.com/Font-Awesome/">Font Awesome</a>.', '6'), 'Squared' ),
 						'type'   => 'text',
 					),
-					'squared_icons_link_'.$i.'8'  => array(
-                        'inputlabel' => __( sprintf('Icon link %s: <br/>Example: "http://facebook.com".', '8'), 'Squared' ),
+					array(
+						'key' => 'squared_icons_link_'.$i.'7',
+                        'inputlabel' => __( sprintf('Icon link %s: <br/>Example: "http://facebook.com".', '7'), 'Squared' ),
                         'type'   => 'text',
                     ),
 				),
