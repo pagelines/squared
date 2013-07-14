@@ -222,9 +222,7 @@ class Squared extends PageLinesSection {
 
 		$array = array();
 
-<<<<<<< HEAD
 		$squares = ( $this->opt( 'squared_squares', $this->oset ) ) ? $this->opt( 'squared_squares', $this->oset ) : '1' ;
-=======
 		$array['squared_squares'] = array(
 			'type'    => 'count_select',
 			'count_start' => 1,
@@ -241,7 +239,6 @@ class Squared extends PageLinesSection {
 		$oset = array( 'post_id' => $post_ID, 'clone_id' => $settings['clone_id'], 'type' => $settings['type'] );
 
 		$squares = ( $this->opt( 'squared_squares', $oset ) ) ? $this->opt( 'squared_squares', $oset ) : '1' ;
->>>>>>> e6b9c9b9f7a8f056633a08af4f424355238c9abb
 
 		for ( $i = 1; $i <= $squares; $i++ ) {
 
@@ -262,13 +259,10 @@ class Squared extends PageLinesSection {
 
 					),
 					'squared_background_color_'.$i  => array(
-<<<<<<< HEAD
 						'inputlabel' => __( 'Squared Background Color', 'Squared' ),
 						'type'   => 'color',
-=======
 						'inputlabel' => __( 'Color', 'Squared' ),
 						'type'   => 'colorpicker',
->>>>>>> e6b9c9b9f7a8f056633a08af4f424355238c9abb
 						'shortexp'   => __( 'Select a background color...', 'Squared' )
 					),
 					'squared_head_'.$i  => array(
@@ -278,12 +272,9 @@ class Squared extends PageLinesSection {
 					),
 					'squared_head_color_'.$i  => array(
 						'inputlabel' => __( 'Color', 'Squared' ),
-<<<<<<< HEAD
 						'title'   => 'Squared Head Color ' .$i ,
 						'type'   => 'color'
-=======
 						'type'   => 'colorpicker'
->>>>>>> e6b9c9b9f7a8f056633a08af4f424355238c9abb
 					),
 					'squared_subhead_'.$i  => array(
 						'inputlabel' => __( 'Squared Subheading', 'Squared' ),
