@@ -274,7 +274,6 @@ class Squared extends PageLinesSection {
 						'inputlabel' => __( 'Color', 'Squared' ),
 						'title'   => 'Squared Head Color ' .$i ,
 						'type'   => 'color'
-						'type'   => 'colorpicker'
 					),
 					'squared_subhead_'.$i  => array(
 						'inputlabel' => __( 'Squared Subheading', 'Squared' ),
