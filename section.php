@@ -331,7 +331,7 @@ class Squared extends PageLinesSection {
                         'type'   => 'text',
                     ),
 					array(
-						'key' => 'squared_icons_'.$i.'4'
+						'key' => 'squared_icons_'.$i.'4',
 						'inputlabel' => __( sprintf('Font Awesome Icon %s: <br/>Example: "icon-facebook" Find them all at <a href="http://fortawesome.github.com/Font-Awesome/">Font Awesome</a>.', '4'), 'Squared' ),
 						'type'   => 'text',
 					),
