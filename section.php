@@ -165,7 +165,7 @@ class Squared extends PageLinesSection {
 								}
 
 								if ( $the_img && $link ) {
-									$output .= sprintf( '<a href="%s"><div class="usquare_block_link" style="background-color:%s;">%s</div></a>', $link, $the_background_color, $img_position );
+									$output .= sprintf( '<a href="%s" target="_blank"><div class="usquare_block_link" style="background-color:%s;">%s</div></a>', $link, $the_background_color, $img_position );
 								} elseif ( $the_img ) {
 									$output .= sprintf( '<div class="usquare_block" style="background-color:%s;">%s<div class="usquare_block_extended usquare_square_bg%s" style="background-color:%s;">%s<ul class="social_background">%s%s%s%s%s%s%s%s</ul><div class="row"></div>%s%s</div></div>', $the_background_color, $img_position, $i, $the_background_color, $close, $icons1, $icons2, $icons3, $icons4, $icons5, $icons6, $icons7, $icons8, $the_about_head, $the_about_body );
 								} else {
@@ -217,330 +217,175 @@ class Squared extends PageLinesSection {
 		for ( $i = 1; $i <= $squares; $i++ ) {
 
 			$options[] = array(
-				
+
 				'title'   => __( 'Square ', 'Squared' ) . $i,
 				'type'    => 'multi',
-				'selectvalues' => array(
+				'opts' => array(
 
 					array(
 					 	'key' =>	'squared_image_'.$i,
-						'inputlabel'  => __( 'Squared Image', 'Squared' ),
+						'label'  => __( 'Squared Image', 'Squared' ),
 						'type'   => 'image_upload',
-						'shortexp'   => __( 'Upload an image... </br>Recommended image size: 160x160</br>Images will scale to match the size of the square, not crop.', 'Squared' )
-
+						'help'   => __( 'Upload an image... </br>Recommended image size: 160x160</br>Images will scale to match the size of the square, not crop.', 'Squared' )
 					),
 
 					array(
 						'key' =>'squared_link_'.$i,
-						'inputlabel'  => __( 'Squared Link', 'Squared' ),
+						'label'  => __( 'Squared Link', 'Squared' ),
 						'type'   => 'text',
-						'shortexp'   => __( 'Square links to (If this is set, there will be no dropdown)', 'Squared' )
+						'help'   => __( 'Square links to (If this is set, there will be no dropdown)', 'Squared' )
 					),
 
 					array(
 						'key' =>	'squared_background_color_'.$i,
-						'inputlabel' => __( 'Squared Background Color', 'Squared' ),
+						'label' => __( 'Squared Background Color', 'Squared' ),
 						'type'   => 'color',
-						'inputlabel' => __( 'Color', 'Squared' ),
-						'shortexp'   => __( 'Select a background color...', 'Squared' )
+						'help'   => __( 'Select a background color...', 'Squared' ),
+						'default' => '000000',
 					),
 
 					array(
 						'key' => 'squared_head_'.$i,
-						'inputlabel' => __( 'Squared Heading', 'Squared' ),
+						'label' => __( 'Squared Heading', 'Squared' ),
 						'type'   => 'text',
-						'shortexp'   => __( 'Add a heading text... </br>Recommended character limit: 20', 'Squared' )
 					),
 
 					array(
 						'key' => 'squared_head_color_'.$i,
-						'inputlabel' => __( 'Color', 'Squared' ),
-						'title'   => 'Squared Head Color ' .$i ,
-						'type'   => 'color'
+						'label' => __( 'Squared Head Color', 'Squared' ),
+						'type'   => 'color',
+						'help'   => __( 'Add a heading text and select a color.. </br>Recommended character limit: 20', 'Squared' ),
+						'default' => '000000',
 					),
 
 					array(
 						'key' => 'squared_subhead_'.$i,
-						'inputlabel' => __( 'Squared Subheading', 'Squared' ),
+						'label' => __( 'Squared Subheading', 'Squared' ),
 						'type'   => 'text',
-						'shortexp'   => __( 'Add a subheading... </br>Recommended character limit: 35', 'Squared' )
 					),
 
 					array(
 						'key' => 'squared_subhead_color_'.$i,
-						'inputlabel' => __( 'Color', 'Squared' ),
-						'title'   => 'Subhead Color ' .$i,
-						'type'   => 'color'
+						'label' => __( 'Subhead Color', 'Squared' ),
+						'type'   => 'color',
+						'help'   => __( 'Add a subheading and select a color.. </br>Recommended character limit: 35', 'Squared' )
 					),
 
 					array(
 						'key' => 'squared_about_head_'.$i,
-						'inputlabel' => __( 'Squared About Heading', 'Squared' ),
+						'label' => __( 'Squared About Heading', 'Squared' ),
 						'type'   => 'text',
-						'shortexp'   => __( 'Add a header...', 'Squared' )
 					),
 
 					array(
 						'key' => 'squared_about_head_color_'.$i,
-						'inputlabel' => __( 'Color', 'Squared' ),
-						'type'   => 'color'
+						'label' => __( 'Squared About Head Color', 'Squared' ),
+						'type'   => 'color',
+						'help'   => __( 'Add a about header and select a color..', 'Squared' )
 					),
 
 					array(
 						'key' => 'squared_about_body_'.$i,
-						'inputlabel' => __( 'Squared About Body', 'Squared' ),
+						'label' => __( 'Squared About Body', 'Squared' ),
 						'type'   => 'textarea',
-						'shortexp'   => __( 'Add body text...', 'Squared' )
 					),
 
 					array(
 						'key' => 'squared_about_body_color_'.$i,
-						'inputlabel' => __( 'Color', 'Squared' ),
-						'type'   => 'color'
+						'label' => __( 'Squared About Body Color', 'Squared' ),
+						'type'   => 'color',
+						'help'   => __( 'Add body text and select a color..', 'Squared' )
 					),
 
 					array(
 						'key' => 'squared_icons_'.$i.'1',
-						'inputlabel' => __( sprintf('Font Awesome Icon %s: <br/>Example: "icon-facebook" Find them all at <a href="http://fortawesome.github.com/Font-Awesome/">Font Awesome</a>.', '1'), 'Squared' ),
-						'type'   => 'text',
+						'label' => __( sprintf('Font Awesome Icon %s:', '1'), 'Squared' ),
+						'type'   => 'select_icon',
 					),
 
 					array(
 						'key' => 'squared_icons_link_'.$i.'1',
-                        'inputlabel' => __( sprintf('Icon link %s: <br/>Example: "http://facebook.com".', '1'), 'Squared' ),
+                        'label' => __( sprintf('Icon link %s: <br/>Example: "http://facebook.com".', '1'), 'Squared' ),
                         'type'   => 'text',
                     ),
 					array(
 						'key' => 'squared_icons_'.$i.'2',
-						'inputlabel' => __( sprintf('Font Awesome Icon %s: <br/>Example: "icon-facebook" Find them all at <a href="http://fortawesome.github.com/Font-Awesome/">Font Awesome</a>.', '2'), 'Squared' ),
-						'type'   => 'text',
+						'label' => __( sprintf('Font Awesome Icon %s:', '2'), 'Squared' ),
+						'type'   => 'select_icon',
 					),
 					array(
 						'key' => 'squared_icons_link_'.$i.'2',
-                        'inputlabel' => __( sprintf('Icon link %s: <br/>Example: "http://facebook.com".', '2'), 'Squared' ),
+                        'label' => __( sprintf('Icon link %s: <br/>Example: "http://facebook.com".', '2'), 'Squared' ),
                         'type'   => 'text',
                     ),
 					array(
 						'key' => 'squared_icons_'.$i.'3',
-						'inputlabel' => __( sprintf('Font Awesome Icon %s: <br/>Example: "icon-facebook" Find them all at <a href="http://fortawesome.github.com/Font-Awesome/">Font Awesome</a>.', '3'), 'Squared' ),
-						'type'   => 'text',
+						'label' => __( sprintf('Font Awesome Icon %s:', '3'), 'Squared' ),
+						'type'   => 'select_icon',
 					),
 					array(
 						'key' => 'squared_icons_link_'.$i.'3',
-                        'inputlabel' => __( sprintf('Icon link %s: <br/>Example: "http://facebook.com".', '3'), 'Squared' ),
+                        'label' => __( sprintf('Icon link %s: <br/>Example: "http://facebook.com".', '3'), 'Squared' ),
                         'type'   => 'text',
                     ),
 					array(
 						'key' => 'squared_icons_'.$i.'4',
-						'inputlabel' => __( sprintf('Font Awesome Icon %s: <br/>Example: "icon-facebook" Find them all at <a href="http://fortawesome.github.com/Font-Awesome/">Font Awesome</a>.', '4'), 'Squared' ),
-						'type'   => 'text',
+						'label' => __( sprintf('Font Awesome Icon %s:', '4'), 'Squared' ),
+						'type'   => 'select_icon',
 					),
 					array(
 						'key' => 'squared_icons_link_'.$i.'4',
-                        'inputlabel' => __( sprintf('Icon link %s: <br/>Example: "http://facebook.com".', '4'), 'Squared' ),
+                        'label' => __( sprintf('Icon link %s: <br/>Example: "http://facebook.com".', '4'), 'Squared' ),
                         'type'   => 'text',
                     ),
 					array(
 						'key' => 'squared_icons_'.$i.'5',
-						'inputlabel' => __( sprintf('Font Awesome Icon %s: <br/>Example: "icon-facebook" Find them all at <a href="http://fortawesome.github.com/Font-Awesome/">Font Awesome</a>.', '5'), 'Squared' ),
-						'type'   => 'text',
+						'label' => __( sprintf('Font Awesome Icon %s:', '5'), 'Squared' ),
+						'type'   => 'select_icon',
 					),
 					array(
 						'key' => 'squared_icons_link_'.$i.'5',
-                        'inputlabel' => __( sprintf('Icon link %s: <br/>Example: "http://facebook.com".', '5'), 'Squared' ),
+                        'label' => __( sprintf('Icon link %s: <br/>Example: "http://facebook.com".', '5'), 'Squared' ),
                         'type'   => 'text',
                     ),
 					array(
 						'key' => 'squared_icons_'.$i.'6',
-						'inputlabel' => __( sprintf('Font Awesome Icon %s: <br/>Example: "icon-facebook" Find them all at <a href="http://fortawesome.github.com/Font-Awesome/">Font Awesome</a>.', '6'), 'Squared' ),
-						'type'   => 'text',
+						'label' => __( sprintf('Font Awesome Icon %s:', '5'), 'Squared' ),
+						'type'   => 'select_icon',
 					),
 					array(
 						'key' => 'squared_icons_link_'.$i.'6',
-                        'inputlabel' => __( sprintf('Icon link %s: <br/>Example: "http://facebook.com".', '6'), 'Squared' ),
+                        'label' => __( sprintf('Icon link %s: <br/>Example: "http://facebook.com".', '6'), 'Squared' ),
                         'type'   => 'text',
                     ),
 					array(
 						'key' => 'squared_icons_'.$i.'7',
-						'inputlabel' => __( sprintf('Font Awesome Icon %s: <br/>Example: "icon-facebook" Find them all at <a href="http://fortawesome.github.com/Font-Awesome/">Font Awesome</a>.', '6'), 'Squared' ),
-						'type'   => 'text',
+						'label' => __( sprintf('Font Awesome Icon %s:', '6'), 'Squared' ),
+						'type'   => 'select_icon',
 					),
 					array(
 						'key' => 'squared_icons_link_'.$i.'7',
-                        'inputlabel' => __( sprintf('Icon link %s: <br/>Example: "http://facebook.com".', '7'), 'Squared' ),
+                        'label' => __( sprintf('Icon link %s: <br/>Example: "http://facebook.com".', '7'), 'Squared' ),
                         'type'   => 'text',
                     ),
 					array(
 						'key' => 'squared_icons_'.$i.'7',
-						'inputlabel' => __( sprintf('Font Awesome Icon %s: <br/>Example: "icon-facebook" Find them all at <a href="http://fortawesome.github.com/Font-Awesome/">Font Awesome</a>.', '6'), 'Squared' ),
-						'type'   => 'text',
+						'label' => __( sprintf('Font Awesome Icon %s:', '7'), 'Squared' ),
+						'type'   => 'select_icon',
 					),
 					array(
 						'key' => 'squared_icons_link_'.$i.'7',
-                        'inputlabel' => __( sprintf('Icon link %s: <br/>Example: "http://facebook.com".', '7'), 'Squared' ),
+                        'label' => __( sprintf('Icon link %s: <br/>Example: "http://facebook.com".', '7'), 'Squared' ),
                         'type'   => 'text',
                     ),
 				),
 				'title'   => __( 'Square ', 'Squared' ) . $i,
-				'shortexp'   => __( 'Setup options for square number ', 'Squared' ) . $i,
+				'help'   => __( 'Setup options for square number ', 'Squared' ) . $i,
 			);
 
 		}
 
 		return $options;
-	}
-
-
-	function section_optionator( $settings ) {
-
-		$settings = wp_parse_args( $settings, $this->optionator_default );
-
-		$array = array();
-
-		for ( $i = 1; $i <= $squares; $i++ ) {
-
-			$array['squared_square_'.$i] = array(
-				'type'    => 'multi_option',
-				'selectvalues' => array(
-
-					'squared_image_'.$i  => array(
-						'inputlabel'  => __( 'Squared Image', 'Squared' ),
-						'type'   => 'image_upload',
-						'shortexp'   => __( 'Upload an image... </br>Recommended image size: 160x160</br>Images will scale to match the size of the square, not crop.', 'Squared' )
-
-					),
-					'squared_link_'.$i  => array(
-						'inputlabel'  => __( 'Squared Link', 'Squared' ),
-						'type'   => 'text',
-						'shortexp'   => __( 'Square links to (If this is set, there will be no dropdown)', 'Squared' )
-
-					),
-					'squared_background_color_'.$i  => array(
-						'inputlabel' => __( 'Squared Background Color', 'Squared' ),
-						'type'   => 'color',
-						'inputlabel' => __( 'Color', 'Squared' ),
-						'type'   => 'colorpicker',
-						'shortexp'   => __( 'Select a background color...', 'Squared' )
-					),
-					'squared_head_'.$i  => array(
-						'inputlabel' => __( 'Squared Heading', 'Squared' ),
-						'type'   => 'text',
-						'shortexp'   => __( 'Add a heading text... </br>Recommended character limit: 20', 'Squared' )
-					),
-					'squared_head_color_'.$i  => array(
-						'inputlabel' => __( 'Color', 'Squared' ),
-						'title'   => 'Squared Head Color ' .$i ,
-						'type'   => 'color'
-					),
-					'squared_subhead_'.$i  => array(
-						'inputlabel' => __( 'Squared Subheading', 'Squared' ),
-						'type'   => 'text',
-						'shortexp'   => __( 'Add a subheading... </br>Recommended character limit: 35', 'Squared' )
-					),
-					'squared_subhead_color_'.$i  => array(
-						'inputlabel' => __( 'Color', 'Squared' ),
-						'title'   => 'Subhead Color ' .$i,
-						'type'   => 'color'
-					),
-					'squared_about_head_'.$i  => array(
-						'inputlabel' => __( 'Squared About Heading', 'Squared' ),
-						'type'   => 'text',
-						'shortexp'   => __( 'Add a header...', 'Squared' )
-					),
-					'squared_about_head_color_'.$i  => array(
-						'inputlabel' => __( 'Color', 'Squared' ),
-						'type'   => 'color'
-					),
-					'squared_about_body_'.$i  => array(
-						'inputlabel' => __( 'Squared About Body', 'Squared' ),
-						'type'   => 'textarea',
-						'shortexp'   => __( 'Add body text...', 'Squared' )
-					),
-					'squared_about_body_color_'.$i  => array(
-						'inputlabel' => __( 'Color', 'Squared' ),
-						'type'   => 'color'
-					),
-					'squared_icons_'.$i.'1'  => array(
-						'inputlabel' => __( sprintf('Font Awesome Icon %s: <br/>Example: "icon-facebook" Find them all at <a href="http://fortawesome.github.com/Font-Awesome/">Font Awesome</a>.', '1'), 'Squared' ),
-						'type'   => 'text',
-					),
-					'squared_icons_link_'.$i.'1'  => array(
-                        'inputlabel' => __( sprintf('Icon link %s: <br/>Example: "http://facebook.com".', '1'), 'Squared' ),
-                        'type'   => 'text',
-                    ),
-					'squared_icons_'.$i.'2'  => array(
-						'inputlabel' => __( sprintf('Font Awesome Icon %s: <br/>Example: "icon-facebook" Find them all at <a href="http://fortawesome.github.com/Font-Awesome/">Font Awesome</a>.', '2'), 'Squared' ),
-						'type'   => 'text',
-					),
-					'squared_icons_link_'.$i.'2'  => array(
-                        'inputlabel' => __( sprintf('Icon link %s: <br/>Example: "http://facebook.com".', '2'), 'Squared' ),
-                        'type'   => 'text',
-                    ),
-					'squared_icons_'.$i.'3'  => array(
-						'inputlabel' => __( sprintf('Font Awesome Icon %s: <br/>Example: "icon-facebook" Find them all at <a href="http://fortawesome.github.com/Font-Awesome/">Font Awesome</a>.', '3'), 'Squared' ),
-						'type'   => 'text',
-					),
-					'squared_icons_link_'.$i.'3'  => array(
-                        'inputlabel' => __( sprintf('Icon link %s: <br/>Example: "http://facebook.com".', '3'), 'Squared' ),
-                        'type'   => 'text',
-                    ),
-					'squared_icons_'.$i.'4'  => array(
-						'inputlabel' => __( sprintf('Font Awesome Icon %s: <br/>Example: "icon-facebook" Find them all at <a href="http://fortawesome.github.com/Font-Awesome/">Font Awesome</a>.', '4'), 'Squared' ),
-						'type'   => 'text',
-					),
-					'squared_icons_link_'.$i.'4'  => array(
-                        'inputlabel' => __( sprintf('Icon link %s: <br/>Example: "http://facebook.com".', '4'), 'Squared' ),
-                        'type'   => 'text',
-                    ),
-					'squared_icons_'.$i.'5'  => array(
-						'inputlabel' => __( sprintf('Font Awesome Icon %s: <br/>Example: "icon-facebook" Find them all at <a href="http://fortawesome.github.com/Font-Awesome/">Font Awesome</a>.', '5'), 'Squared' ),
-						'type'   => 'text',
-					),
-					'squared_icons_link_'.$i.'5'  => array(
-                        'inputlabel' => __( sprintf('Icon link %s: <br/>Example: "http://facebook.com".', '5'), 'Squared' ),
-                        'type'   => 'text',
-                    ),
-					'squared_icons_'.$i.'6'  => array(
-						'inputlabel' => __( sprintf('Font Awesome Icon %s: <br/>Example: "icon-facebook" Find them all at <a href="http://fortawesome.github.com/Font-Awesome/">Font Awesome</a>.', '6'), 'Squared' ),
-						'type'   => 'text',
-					),
-					'squared_icons_link_'.$i.'6'  => array(
-                        'inputlabel' => __( sprintf('Icon link %s: <br/>Example: "http://facebook.com".', '6'), 'Squared' ),
-                        'type'   => 'text',
-                    ),
-					'squared_icons_'.$i.'7'  => array(
-						'inputlabel' => __( sprintf('Font Awesome Icon %s: <br/>Example: "icon-facebook" Find them all at <a href="http://fortawesome.github.com/Font-Awesome/">Font Awesome</a>.', '7'), 'Squared' ),
-						'type'   => 'text',
-					),
-					'squared_icons_link_'.$i.'7'  => array(
-                        'inputlabel' => __( sprintf('Icon link %s: <br/>Example: "http://facebook.com".', '7'), 'Squared' ),
-                        'type'   => 'text',
-                    ),
-					'squared_icons_'.$i.'8'  => array(
-						'inputlabel' => __( sprintf('Font Awesome Icon %s: <br/>Example: "icon-facebook" Find them all at <a href="http://fortawesome.github.com/Font-Awesome/">Font Awesome</a>.', '8'), 'Squared' ),
-						'type'   => 'text',
-					),
-					'squared_icons_link_'.$i.'8'  => array(
-                        'inputlabel' => __( sprintf('Icon link %s: <br/>Example: "http://facebook.com".', '8'), 'Squared' ),
-                        'type'   => 'text',
-                    ),
-				),
-				'title'   => __( 'Square ', 'Squared' ) . $i,
-				'shortexp'   => __( 'Setup options for square number ', 'Squared' ) . $i,
-			);
-
-		}
-
-		$metatab_settings = array(
-			'id'   => 'squared_options',
-			'name'   => 'Squared',
-			'icon'   => $this->icon,
-			'clone_id' => $settings['clone_id'],
-			'active' => $settings['active']
-		);
-
-		register_metatab( $metatab_settings, $array );
-
 	}
 
 }
