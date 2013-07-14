@@ -189,6 +189,28 @@ class Squared extends PageLinesSection {
 		echo setup_section_notify($this, __('Please set up Squared.', 'Squared'));
 	}
 
+	function section_opts() {
+
+		$options = array();
+
+		$options[] = array(
+
+			'title' => __( 'Settings', 'squared' ),
+			'type'	=> 'multi',
+			'opts'	=> array(
+				array(
+		            'key'           => 'squared_squares',
+		            'type'          => 'count_select',
+		            'label'			=> __( 'Number of Squares to configure', 'squared' ),
+		            'count_start'   => 1,               // Starting Count Number
+		            'count_number'  => 30,             // Ending Count Number
+		        ),
+		    )
+		);
+
+		return $options;
+	}
+
 
 	function section_optionator( $settings ) {
 
@@ -196,22 +218,7 @@ class Squared extends PageLinesSection {
 
 		$array = array();
 
-		$array['squared_squares'] = array(
-			'type'    => 'count_select',
-			'count_start' => 1,
-			'count_number'  => 15,
-			'default'  => 1,
-			'inputlabel'  => __( 'Number of Squares to Configure', 'Squared' ),
-			'title'   => __( 'Number of Squares', 'Squared' ),
-			'shortexp'   => __( 'Enter the number of Squares.', 'Squared' ),
-			'exp'    => __( "This number will be used to generate Squares and option setup. Option will update when settings are saved.", 'Squared' ),
-		);
-
-		global $post_ID;
-
-		$oset = array( 'post_id' => $post_ID, 'clone_id' => $settings['clone_id'], 'type' => $settings['type'] );
-
-		$squares = ( ploption( 'squared_squares', $oset ) ) ? ploption( 'squared_squares', $oset ) : '1' ;
+		$squares = ( $this->opt( 'squared_squares', $this->oset ) ) ? $this->opt( 'squared_squares', $this->oset ) : '1' ;
 
 		for ( $i = 1; $i <= $squares; $i++ ) {
 
@@ -227,9 +234,8 @@ class Squared extends PageLinesSection {
 
 					),
 					'squared_background_color_'.$i  => array(
-						'inputlabel' => __( 'Color', 'Squared' ),
-						'type'   => 'colorpicker',
-						'title'   => __( 'Squared Background Color ', 'Squared' ) . $i,
+						'inputlabel' => __( 'Squared Background Color', 'Squared' ),
+						'type'   => 'color',
 						'shortexp'   => __( 'Select a background color...', 'Squared' )
 					),
 					'squared_head_'.$i  => array(
@@ -241,7 +247,7 @@ class Squared extends PageLinesSection {
 					'squared_head_color_'.$i  => array(
 						'inputlabel' => __( 'Color', 'Squared' ),
 						'title'   => 'Squared Head Color ' .$i ,
-						'type'   => 'colorpicker'
+						'type'   => 'color'
 					),
 					'squared_subhead_'.$i  => array(
 						'inputlabel' => __( 'Squared Subheading', 'Squared' ),
@@ -252,7 +258,7 @@ class Squared extends PageLinesSection {
 					'squared_subhead_color_'.$i  => array(
 						'inputlabel' => __( 'Color', 'Squared' ),
 						'title'   => 'Subhead Color ' .$i,
-						'type'   => 'colorpicker'
+						'type'   => 'color'
 					),
 					'squared_about_head_'.$i  => array(
 						'inputlabel' => __( 'Squared About Heading', 'Squared' ),
@@ -263,7 +269,7 @@ class Squared extends PageLinesSection {
 					'squared_about_head_color_'.$i  => array(
 						'title'   => 'Squared About Head Color ' .$i,
 						'inputlabel' => __( 'Color', 'Squared' ),
-						'type'   => 'colorpicker'
+						'type'   => 'color'
 					),
 					'squared_about_body_'.$i  => array(
 						'inputlabel' => __( 'Squared About Body', 'Squared' ),
@@ -274,7 +280,7 @@ class Squared extends PageLinesSection {
 					'squared_about_body_color_'.$i  => array(
 						'title'   => 'Squared Body Color ' .$i,
 						'inputlabel' => __( 'Color', 'Squared' ),
-						'type'   => 'colorpicker'
+						'type'   => 'color'
 					),
 					'squared_icons_'.$i.'1'  => array(
 						'title'   => 'Squared Icon 1',
