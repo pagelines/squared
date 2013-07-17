@@ -4,7 +4,7 @@
 	Author: Aleksander Hansson
 	Author URI: http://ahansson.com
 	Demo: http://squared.ahansson.com
-	Version: 1.6
+	Version: 1.7
 	Description: Squared is an interactive grid system that supports up to 15 images or icons with your custom text. It is awesome!
 	Class Name: Squared
 	Workswith: main, templates
@@ -95,47 +95,47 @@ class Squared extends PageLinesSection {
 								$link = ( $this->opt( 'squared_link_'.$i, $this->tset ) ) ? $this->opt( 'squared_link_'.$i, $this->tset ) : '' ;
 
 								if ( $this->opt( 'squared_icons_'.$i.'1', $this->oset ) ) {
-									$icons1 = sprintf('<li><a href="%s" target="_blank"><i class="%s"></i></a></li>', $this->opt('squared_icons_link_'.$i.'1', $this->oset ), $this->opt('squared_icons_'.$i.'1', $this->oset ) );
+									$icons1 = sprintf('<li><a href="%s" target="_blank"><i class="icon-%s"></i></a></li>', $this->opt('squared_icons_link_'.$i.'1', $this->oset ), $this->opt('squared_icons_'.$i.'1', $this->oset ) );
 								} else {
 									$icons1 ='';
 								}
 								if ( $this->opt( 'squared_icons_'.$i.'2', $this->oset ) ) {
-									$icons2 = sprintf('<li><a href="%s" target="_blank"><i class="%s"></i></a></li>', $this->opt('squared_icons_link_'.$i.'2', $this->oset ), $this->opt('squared_icons_'.$i.'2', $this->oset ) );
+									$icons2 = sprintf('<li><a href="%s" target="_blank"><i class="icon-%s"></i></a></li>', $this->opt('squared_icons_link_'.$i.'2', $this->oset ), $this->opt('squared_icons_'.$i.'2', $this->oset ) );
 								} else {
 									$icons2 ='';
 								}
 								if ( $this->opt( 'squared_icons_'.$i.'3', $this->oset ) ) {
-									$icons3 = sprintf('<li><a href="%s" target="_blank"><i class="%s"></i></a></li>', $this->opt('squared_icons_link_'.$i.'3', $this->oset ), $this->opt('squared_icons_'.$i.'3', $this->oset ) );
+									$icons3 = sprintf('<li><a href="%s" target="_blank"><i class="icon-%s"></i></a></li>', $this->opt('squared_icons_link_'.$i.'3', $this->oset ), $this->opt('squared_icons_'.$i.'3', $this->oset ) );
 								} else {
 									$icons3 ='';
 								}
 								if ( $this->opt( 'squared_icons_'.$i.'4', $this->oset ) ) {
-									$icons4 = sprintf('<li><a href="%s" target="_blank"><i class="%s"></i></a></li>', $this->opt('squared_icons_link_'.$i.'4', $this->oset ), $this->opt('squared_icons_'.$i.'4', $this->oset ) );
+									$icons4 = sprintf('<li><a href="%s" target="_blank"><i class="icon-%s"></i></a></li>', $this->opt('squared_icons_link_'.$i.'4', $this->oset ), $this->opt('squared_icons_'.$i.'4', $this->oset ) );
 								} else {
 									$icons4 ='';
 								}
 								if ( $this->opt( 'squared_icons_'.$i.'5', $this->oset ) ) {
-									$icons5 = sprintf('<li><a href="%s" target="_blank"><i class="%s"></i></a></li>', $this->opt('squared_icons_link_'.$i.'5', $this->oset ), $this->opt('squared_icons_'.$i.'5', $this->oset ) );
+									$icons5 = sprintf('<li><a href="%s" target="_blank"><i class="icon-%s"></i></a></li>', $this->opt('squared_icons_link_'.$i.'5', $this->oset ), $this->opt('squared_icons_'.$i.'5', $this->oset ) );
 								} else {
 									$icons5 ='';
 								}
 								if ( $this->opt( 'squared_icons_'.$i.'5', $this->oset ) ) {
-									$icons5 = sprintf('<li><a href="%s" target="_blank"><i class="%s"></i></a></li>', $this->opt('squared_icons_link_'.$i.'5', $this->oset ), $this->opt('squared_icons_'.$i.'5', $this->oset ) );
+									$icons5 = sprintf('<li><a href="%s" target="_blank"><i class="icon-%s"></i></a></li>', $this->opt('squared_icons_link_'.$i.'5', $this->oset ), $this->opt('squared_icons_'.$i.'5', $this->oset ) );
 								} else {
 									$icons5 ='';
 								}
 								if ( $this->opt( 'squared_icons_'.$i.'6', $this->oset ) ) {
-									$icons6 = sprintf('<li><a href="%s" target="_blank"><i class="%s"></i></a></li>', $this->opt('squared_icons_link_'.$i.'6', $this->oset ), $this->opt('squared_icons_'.$i.'6', $this->oset ) );
+									$icons6 = sprintf('<li><a href="%s" target="_blank"><i class="icon-%s"></i></a></li>', $this->opt('squared_icons_link_'.$i.'6', $this->oset ), $this->opt('squared_icons_'.$i.'6', $this->oset ) );
 								} else {
 									$icons6 ='';
 								}
 								if ( $this->opt( 'squared_icons_'.$i.'7', $this->oset ) ) {
-									$icons7 = sprintf('<li><a href="%s" target="_blank"><i class="%s"></i></a></li>', $this->opt('squared_icons_link_'.$i.'7', $this->oset ), $this->opt('squared_icons_'.$i.'7', $this->oset ) );
+									$icons7 = sprintf('<li><a href="%s" target="_blank"><i class="icon-%s"></i></a></li>', $this->opt('squared_icons_link_'.$i.'7', $this->oset ), $this->opt('squared_icons_'.$i.'7', $this->oset ) );
 								} else {
 									$icons7 ='';
 								}
 								if ( $this->opt( 'squared_icons_'.$i.'8', $this->oset ) ) {
-									$icons8 = sprintf('<li><a href="%s" target="_blank"><i class="%s"></i></a></li>', $this->opt('squared_icons_link_'.$i.'8', $this->oset ), $this->opt('squared_icons_'.$i.'8', $this->oset ) );
+									$icons8 = sprintf('<li><a href="%s" target="_blank"><i class="icon-%s"></i></a></li>', $this->opt('squared_icons_link_'.$i.'8', $this->oset ), $this->opt('squared_icons_'.$i.'8', $this->oset ) );
 								} else {
 									$icons8 ='';
 								}
@@ -149,7 +149,7 @@ class Squared extends PageLinesSection {
 
 									$close = sprintf('<a href="#" class="close close_left_side"><i class="icon-remove"></i></a>');
 
-									$img_position = sprintf('<div class="usquare_square usquare_square_bg%s"><div class="usquare_square_text_wrapper">%s<div class="row"></div>%s%s<div class="row"></div></div></div>%s', $i, $arrow, $the_head, $the_subhead, $img );
+									$img_position = sprintf('<div class="usquare_square usquare_square_bg%s"><div class="usquare_square_text_wrapper usquare_square_right">%s<div class="row"></div>%s%s<div class="row"></div></div></div>%s', $i, $arrow, $the_head, $the_subhead, $img );
 
 								} else {
 									$the_head = ( $this->opt( 'squared_head_'.$i, $this->tset ) ) ? sprintf( '<h3 data-sync="squared_head_%s" style="color:%s;">%s</h3>', $i, $the_head_color, $this->opt( 'squared_head_'.$i, $this->tset ) ) : '' ;
@@ -241,7 +241,7 @@ class Squared extends PageLinesSection {
 						'label' => __( 'Squared Background Color', 'Squared' ),
 						'type'   => 'color',
 						'help'   => __( 'Select a background color...', 'Squared' ),
-						'default' => '000000',
+						'default' => '444444',
 					),
 
 					array(
@@ -255,7 +255,7 @@ class Squared extends PageLinesSection {
 						'label' => __( 'Squared Head Color', 'Squared' ),
 						'type'   => 'color',
 						'help'   => __( 'Add a heading text and select a color.. </br>Recommended character limit: 20', 'Squared' ),
-						'default' => '000000',
+						'default' => 'ffffff',
 					),
 
 					array(
@@ -268,7 +268,8 @@ class Squared extends PageLinesSection {
 						'key' => 'squared_subhead_color_'.$i,
 						'label' => __( 'Subhead Color', 'Squared' ),
 						'type'   => 'color',
-						'help'   => __( 'Add a subheading and select a color.. </br>Recommended character limit: 35', 'Squared' )
+						'help'   => __( 'Add a subheading and select a color.. </br>Recommended character limit: 35', 'Squared' ),
+						'default' => 'ffffff',
 					),
 
 					array(
@@ -281,7 +282,8 @@ class Squared extends PageLinesSection {
 						'key' => 'squared_about_head_color_'.$i,
 						'label' => __( 'Squared About Head Color', 'Squared' ),
 						'type'   => 'color',
-						'help'   => __( 'Add a about header and select a color..', 'Squared' )
+						'help'   => __( 'Add a about header and select a color..', 'Squared' ),
+						'default' => 'ffffff',
 					),
 
 					array(
@@ -294,7 +296,8 @@ class Squared extends PageLinesSection {
 						'key' => 'squared_about_body_color_'.$i,
 						'label' => __( 'Squared About Body Color', 'Squared' ),
 						'type'   => 'color',
-						'help'   => __( 'Add body text and select a color..', 'Squared' )
+						'help'   => __( 'Add body text and select a color..', 'Squared' ),
+						'default' => 'ffffff',
 					),
 
 					array(
