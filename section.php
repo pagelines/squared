@@ -226,14 +226,14 @@ class Squared extends PageLinesSection {
 					 	'key' =>	'squared_image_'.$i,
 						'label'  => __( 'Squared Image', 'Squared' ),
 						'type'   => 'image_upload',
-						'help'   => __( 'Upload an image... </br>Recommended image size: 160x160</br>Images will scale to match the size of the square, not crop.', 'Squared' )
+						'help'   => __( 'Upload an image... </br>Recommended image size: 160x160</br>Images will scale to match the size of the square, not crop.', 'Squared' ),
 					),
 
 					array(
 						'key' =>'squared_link_'.$i,
 						'label'  => __( 'Squared Link', 'Squared' ),
 						'type'   => 'text',
-						'help'   => __( 'Square links to (If this is set, there will be no dropdown)', 'Squared' )
+						'help'   => __( 'Square links to (If this is set, there will be no dropdown)', 'Squared' ),
 					),
 
 					array(
