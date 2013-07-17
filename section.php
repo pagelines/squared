@@ -9,6 +9,7 @@
 	Class Name: Squared
 	Workswith: main, templates
 	Cloning: true
+	v3: true
 */
 
 class Squared extends PageLinesSection {
