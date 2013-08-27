@@ -4,7 +4,6 @@
 	Author: Aleksander Hansson
 	Author URI: http://ahansson.com
 	Demo: http://squared.ahansson.com
-	Version: 1.7
 	Description: Squared is an interactive grid system that supports up to 15 images or icons with your custom text. It is awesome!
 	Class Name: Squared
 	Workswith: main, templates
@@ -25,7 +24,6 @@ class Squared extends PageLinesSection {
 		wp_enqueue_script( 'jquery-mcustomscrollbar', $this->base_url.'/js/jquery.mCustomScrollbar.min.js' );
 
 		wp_enqueue_script( 'jquery-usquare', $this->base_url.'/js/jquery.usquare.js' );
-
 
 	}
 
