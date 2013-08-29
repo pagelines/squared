@@ -6,4 +6,6 @@
 	Version: 1.10
 	Author: Aleksander Hansson
 	Author URI: http://ahansson.com
+	v3: true
+	PageLines: true
 */
