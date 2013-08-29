@@ -6,9 +6,9 @@
 	Demo: http://squared.ahansson.com
 	Description: Squared is an interactive grid system that supports up to 15 images or icons with your custom text. It is awesome!
 	Class Name: Squared
-	Workswith: main, templates
 	Cloning: true
 	v3: true
+	Filter: format
 */
 
 class Squared extends PageLinesSection {
