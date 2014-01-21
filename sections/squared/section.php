@@ -195,7 +195,7 @@ class Squared extends PageLinesSection {
 
 										$the_subhead = ( pl_array_get( 'subhead', $square ) ) ? sprintf( '<span data-sync="squared_array_item%s_subhead" class="usquare_r" style="color:%s;">%s</span>', $i, $the_subhead_color, pl_array_get( 'subhead', $square ) ) : '' ;
 
-										$arrow = ( !$this->opt( 'squared_arrow_'.$i ) ) ? sprintf('<img src="%s" class="usquare_arrow usquare_arrow_r" alt="arrow" />', $this->base_url.'/img/arrow_r.png') : '' ;
+										$arrow = ( !pl_array_get( 'arrow', $square ) ) ? sprintf('<img src="%s" class="usquare_arrow usquare_arrow_r" alt="arrow" />', $this->base_url.'/img/arrow_r.png') : '' ;
 
 										$close = sprintf('<a href="#" class="close close_left_side"><i class="icon-remove"></i></a>');
 
@@ -207,7 +207,7 @@ class Squared extends PageLinesSection {
 
 										$the_subhead = ( pl_array_get( 'subhead', $square ) ) ? sprintf( '<span data-sync="squared_array_item%s_subhead" style="color:%s;">%s</span>', $i, $the_subhead_color, pl_array_get( 'subhead', $square ) ) : '' ;
 
-										$arrow = ( !$this->opt( 'squared_arrow_'.$i ) ) ? sprintf('<img src="%s" class="usquare_arrow" alt="arrow" />', $this->base_url.'/img/arrow.png') : '' ;
+										$arrow = ( !pl_array_get( 'arrow', $square ) ) ? sprintf('<img src="%s" class="usquare_arrow" alt="arrow" />', $this->base_url.'/img/arrow.png') : '' ;
 
 										$close = sprintf('<a href="#" class="close"><i class="icon-remove"></i></a>');
 
