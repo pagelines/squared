@@ -318,12 +318,22 @@ class Squared extends PageLinesSection {
 				array(
 				 	'key' =>	'arrow',
 					'label'  => __( 'Hide arrow?', 'squared' ),
-					'type'   => 'check',
+					'type' 			=> 'select',
+					'opts'		=> array(
+						true	 	=> array( 'name' => __( 'Yes', 'better-iboxes' ) ),
+						false		=> array( 'name' => __( 'No', 'better-iboxes' ) )
+					),
+					'default'		=> false,
 				),
 				array(
 				 	'key' =>	'filter',
 					'label'  => __( 'Remove grayscale filter?', 'squared' ),
-					'type'   => 'check',
+					'type' 			=> 'select',
+					'opts'		=> array(
+						true	 	=> array( 'name' => __( 'Yes', 'better-iboxes' ) ),
+						false		=> array( 'name' => __( 'No', 'better-iboxes' ) )
+					),
+					'default'		=> false,
 				),
 				array(
 					'key' =>'link',
